@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Duce Outfit Medium";
+    src:
+      url("/fonts/Outfit-Medium.woff2") format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Duce Outfit Reg";
+    src:
+      url("/fonts/Outfit-Regular.woff2") format("woff2");
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Duce Outfit Reg', Arial, Helvetica, sans-serif;
+    margin: auto;
+    overflow-x: hidden;
+    color: --text-color #4F4E4E;
+    --pri-color: #FF6400;
+    --heading-dark-color: #2C2C2C;
+}
+
+header, main, section {
+    display: grid;
+    justify-items: center;
+    overflow: hidden;
+}
+
+h1, h3, h4, h5, span {
+    font-family: 'Duce Outfit Medium', Arial, Helvetica, sans-serif;
+    color: var(--heading-dark-color);
+    font-style: normal;
+    line-height: normal;
+}
+
+h1, h3 {
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-weight: 600;
+}
+
+h3, h4, p {
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 3rem;   
+}
+
+h4 {
+    font-size: 2.25rem;
+}
+
+span {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.125rem;
+    font-style: normal;
+    line-height: 1.5rem;
+}
+
+section img, main img {
+    object-fit: cover;
+    opacity: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pri-btn {
+    padding: 1rem 2rem;
+    background-color: var(--pri-color);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.pri-btn::before, .pri-btn::after {
+    position: absolute;
+}
+
+.pri-btn::before {
+    content: "";    
+    background-color: var(--heading-dark-color);
+    bottom: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 300ms linear 0ms ;
+}
+
+.pri-btn::after {
+    content: "Join Our Waitlist";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: nowrap;
+}
+
+.pri-btn {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.pri-btn:hover::before {
+    height: 100%;
+}

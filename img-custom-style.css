@@ -1,0 +1,10 @@
+.img__wrapper {
+    background-repeat: no-repeat;
+}
+
+.two .img__wrapper {
+    max-width: 558px;
+    max-height: 494px;
+    background-image: url(./images/DuceCRM-Image.webp); 
+    background-position: -466px -85px;
+}
