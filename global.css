@@ -3,8 +3,6 @@ header {
     position: sticky;
     top: 0;
     width: 100%; 
-    
-    margin: 0px auto;
     min-height: 140px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -16,9 +14,6 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    max-width: 1200px;
-    width: 100%;
-    padding: 10px;
 }
 
 header .logo {
@@ -65,4 +60,30 @@ nav a:hover::after {
     right: auto;
     left: 0;
     width: 100%;
+}
+
+.DC__hero__section {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--t-b-pad);
+
+}
+
+.DC__hero__section p {
+    font-size: 1.5rem;
+}
+
+.DC__hero__section .crm__word {
+    color: var(--pri-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.DC__hero__section .img__wrapper {
+    background-image: url(./images/DuceCRM-Image.webp);
+    background-position: 0px 22px;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
