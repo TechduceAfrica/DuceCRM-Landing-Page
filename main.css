@@ -1,19 +1,20 @@
 @font-face {
-    font-family: "Duce Outfit Medium";
+    font-family: "Outfit-Medium";
     src:
-      url("/fonts/Outfit-Medium.woff2") format("woff2");
+        local("Outfit"),
+        url("./fonts/Outfit-Medium.woff2") format("woff2");
     font-weight: normal;
 }
 
 @font-face {
-    font-family: "Duce Outfit Reg";
+    font-family: "Outfit-Regular";
     src:
-      url("/fonts/Outfit-Regular.woff2") format("woff2");
+      url("./fonts/Outfit-Regular.woff2") format("woff2");
     font-weight: normal;
 }
 
 body {
-    font-family: 'Duce Outfit Reg', Arial, Helvetica, sans-serif;
+    font-family: 'Outfit-Regular', Arial, Helvetica, sans-serif;
     margin: auto;
     overflow-x: hidden;
     color: var(--text-color, #4F4E4E);
@@ -29,7 +30,7 @@ header, main, section {
 }
 
 h1, h3, h4, h5, span, a {
-    font-family: 'Duce Outfit Medium', Arial, Helvetica, sans-serif;
+    font-family: 'Outfit-Medium', Arial, Helvetica, sans-serif;
     font-style: normal;
     line-height: normal;
 }
@@ -125,6 +126,15 @@ p .crm__word {
 
 .margin {
     margin: auto;
+}
+
+input {
+    width: 80%;
+    height: 2.5rem;
+    padding: 5px 20px;
+    margin: 20px 0px 0px 0px;
+    border-radius: 10px;
+    border: solid 1px var(--heading-dark-color);
 }
 
 @media (max-width:787px) {
