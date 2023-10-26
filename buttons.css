@@ -41,27 +41,26 @@
 }
 
 .sec-btn {
+    position: relative;
     color: var(--pri-color);
     display: flex;
     align-items: center;
     font-size: 1.75rem;
     font-weight: 600;
-    position: relative;
     width: -moz-fit-content;
     width: fit-content;
     transition: all 500ms ease-in-out 0ms;
-}
 
-.sec-btn {
-    
     background: linear-gradient(90deg, var(--heading-dark-color), var(--heading-dark-color));
     background-clip: text;
     -webkit-background-clip: text;
-
     background-repeat: no-repeat;
     background-position: left;
     background-size: 0%;
+
+    z-index: 0;
 }
+
 
 .sec-btn:hover {
     color: transparent;

@@ -1,0 +1,21 @@
+@media (max-width:787px) {
+
+    .nav__bar a {
+        display: none;
+    }
+
+    .DC__hero__section {
+        grid-template-columns: auto !important;
+        justify-items: center !important;
+        gap: 40px !important;
+    }
+
+    .DC__hero__section > div {
+        justify-self: center;
+    }
+
+    .DC__hero__section p, 
+    .DC__hero__section span {
+        font-size: 1rem !important;
+    }
+}

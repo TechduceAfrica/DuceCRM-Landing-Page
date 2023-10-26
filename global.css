@@ -7,6 +7,7 @@ header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.35);
+    z-index: 99999;
 }
 
 .nav__bar {
@@ -63,7 +64,8 @@ nav a:hover::after {
 }
 
 .DC__hero__section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
     justify-content: space-between;
     align-items: center;
@@ -81,9 +83,27 @@ nav a:hover::after {
     font-weight: 400;
 }
 
-.DC__hero__section .img__wrapper {
-    background-image: url(./images/DuceCRM-Image.webp);
-    background-position: 0px 22px;
-    background-repeat: no-repeat;
-    background-size: auto;
+.DC__hero__section img {
+    max-width: 525px;
+    max-height: 530px;
+}
+
+section.one > div, 
+section.two, 
+section.three, 
+section.four,
+section.five, 
+section.six,
+section.seven,
+section.eight,
+section.nine {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    gap: 20px;
+    padding-block: var(--t-b-pad);
+}
+
+section.one h3 {
+    text-align: center;
 }
