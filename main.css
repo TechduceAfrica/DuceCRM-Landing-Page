@@ -96,7 +96,15 @@ section p {
 section.one > div, 
 section.two, 
 section.three, 
-section.four {
+section.four,
+section.five, 
+section.six,
+section.seven,
+section.eight,
+section.nine,
+section.ten,
+section.faq,
+.footer__wrapper {
     max-width: 1200px;
     width: 100%;
     padding: 10px;
@@ -113,6 +121,10 @@ p .crm__word {
     color: var(--pri-color);
     font-size: 1.125rem;
     font-weight: 500;
+}
+
+.margin {
+    margin: auto;
 }
 
 @media (max-width:787px) {
