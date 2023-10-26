@@ -96,7 +96,8 @@ section.five,
 section.six,
 section.seven,
 section.eight,
-section.nine {
+section.nine,
+section.ten {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
