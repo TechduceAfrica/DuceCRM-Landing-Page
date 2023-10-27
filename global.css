@@ -96,8 +96,7 @@ section.five,
 section.six,
 section.seven,
 section.eight,
-section.nine,
-section.ten {
+section.nine {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
@@ -105,8 +104,37 @@ section.ten {
     padding-block: var(--t-b-pad);
 }
 
+section.ten {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: end;
+    gap: 20px;
+}
+
 section.one h3 {
     text-align: center;
+}
+
+.svg__play__icon {
+    margin-top: var(--t-b-pad);
+}
+
+.svg__play__icon svg {
+    transform: rotate(0deg);
+    transition: all 300ms ease-in-out 0ms;
+}
+
+.svg__play__icon:hover svg {
+    color: var(--dark-color);
+    transform: rotate(-360deg);
+}
+
+section.ten {
+    background-color: #FFF1E9;
+}
+
+section.ten img {
+    z-index: 1;
 }
 
 @media (max-width:787px) {
@@ -136,12 +164,13 @@ section.one h3 {
 
     .DC__hero__section {
         grid-template-columns: auto;
-        justify-items: center;
+        /* justify-items: center; */
         gap: 40px;
     }
 
-    .DC__hero__section > div {
-        justify-self: center;
+    .DC__hero__section p, 
+    .DC__hero__section h1 {
+        text-align: start;
     }
 
     .DC__hero__section p, 

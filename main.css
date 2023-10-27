@@ -64,7 +64,8 @@ h1, h3 {
 }
 
 h1 {
-    font-size: 3.25rem;
+    font-size: clamp(1.25rem, 4vw + 1rem, 3rem);
+    /* font-size: 3.25rem; */
     font-weight: 600;
 }
 
@@ -123,13 +124,25 @@ section.six,
 section.seven,
 section.eight,
 section.nine,
-section.ten,
 section.faq,
 .footer__wrapper {
     max-width: 1200px;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+}
+
+section.ten {
+    max-width: 1200px;
+    width: 100%;
+    padding-inline: 10px;
+    padding-top: var(--t-b-pad);
+    box-sizing: border-box;
+}
+
+section.ten > div:first-child {
+    padding-top: var(--t-b-pad);
+    padding-bottom: calc(2 * var(--t-b-pad));
 }
 
 h3 .crm__word {
@@ -157,9 +170,19 @@ input {
     border: solid 1px var(--heading-dark-color);
 }
 
-@media (max-width:787px) {
+input[type=submit] {
+    font-family: 'Outfit-Regular';
+    background-color: var(--pri-color);
+    color: #ffffff;
+    border: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* @media (max-width:787px) {
     h1 {
         font-size: 1.625rem;
         letter-spacing: 0.065rem;
     }
-}
+} */

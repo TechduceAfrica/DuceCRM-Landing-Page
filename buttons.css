@@ -33,7 +33,7 @@
 .pri-btn {
     color: #FFFFFF;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .pri-btn:hover::before {
@@ -45,8 +45,8 @@
     color: var(--pri-color);
     display: flex;
     align-items: center;
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
     width: -moz-fit-content;
     width: fit-content;
     transition: all 500ms ease-in-out 0ms;
@@ -68,6 +68,7 @@
 }
 
 .sec-btn svg {
+    width: 20px;
     transform: rotate(-360deg);
     transition: all 300ms ease-in-out 0ms;
 }
