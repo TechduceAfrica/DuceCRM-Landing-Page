@@ -33,6 +33,10 @@
     font-weight: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Outfit-Regular', Arial, Helvetica, sans-serif;
     margin: auto;

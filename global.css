@@ -137,6 +137,102 @@ section.ten img {
     z-index: 1;
 }
 
+.perk__stick {
+    display: flex;
+    justify-content: center;
+    height: 65vh;
+    width: 100%;
+    padding: 0px 20px;
+    /* border: solid 1px red; */
+    overflow: scroll;
+    scroll-padding-top: 100px;
+}
+
+.perk__stick::-webkit-scrollbar {
+    width: 0px;
+}
+
+.perk__stick > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.perk {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 470px;
+    min-height: 470px;
+    width: 400px;
+    border-radius: 20px 0px;
+    overflow: hidden;
+    align-items: end;
+    cursor: pointer;
+}
+
+.perk__one {
+    background: url("/images/Efficient\ communication\ -\ DureCRM.webp") no-repeat right top;
+}
+
+.perk__two {
+    background: url("/images/Improved\ Engagement\ -\ Duce\ CRM.webp") no-repeat right top;
+}
+
+.perk__three {
+    background: url("/images/Greater\ Efficiency\ -\ DuceCRM.webp") no-repeat right top;
+}
+
+.perk__four {
+    background: url("/images/OPtimized\ Sales\ Strategy\ -\ DuceCRM.webp") no-repeat right top;
+}
+
+.perk__text {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height: 50px;
+    border-radius: 20px 0px;
+    border: 1.5px solid rgba(255, 255, 255, 0.60);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    padding: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 500ms ease-in-out 0ms;
+}
+
+.perk:hover .perk__text {
+    min-height: 100%;
+}
+
+.perk__text p {
+    font-size: 1.4rem;
+}
+
+.mobile__perk {
+    display: none;
+}
+
+.svg__play__icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-content: center;
+    border-radius: 100px;
+    animation: pulse 1200ms linear 500ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #FF640079;
+    }
+    70% {
+        box-shadow: 0 0 0 30px #FF640000;
+    }
+    100% {
+        box-shadow: 0 0 0 0 #FF640000;
+    }
+}
+
 @media (max-width:787px) {
 
     header {
@@ -194,12 +290,50 @@ section.ten img {
 
     section.two .img__wrapper,
     section.four img, 
-    section.six img, 
-    section.eight div {
+    section.six img {
         grid-row-start: 2;
     }
 
     section.ten  {
         grid-template-columns: auto ;
+    }
+
+    .perk__stick {
+        height: fit-content;
+        justify-content: start;
+        padding-bottom: 10px;
+    }
+
+    .mobile__perk {
+        display: flex;
+        gap: 20px;
+    }
+
+    .m-perk {
+        width: 190px;
+        border-radius: 20px;
+        box-shadow: 0px 6px 15px 1.5px rgba(255, 100, 0, 0.06);
+    }
+    
+    .perk__stick > div:first-child {
+        display: none;
+    }
+    
+    .perk__img__wrapper img {
+        border-radius: 20px;
+        object-position: center;
+        object-fit: cover;
+        aspect-ratio: 190/150;
+    }
+
+    .m-perk__text > div:last-child {
+        padding-inline: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nine > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
