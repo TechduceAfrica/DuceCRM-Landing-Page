@@ -343,7 +343,7 @@ footer .social__wrapper > div:hover path {
         width: 60vw;
         height: 100vh;
         padding: 20% 50px;
-        transform: translateX(80vw);
+        transform: translateX(110vw);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.938);

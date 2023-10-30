@@ -47,9 +47,9 @@ body {
     --t-b-pad: 50px;
 }
 
-header {
+/* header {
     overflow: hidden visible;
-}
+} */
 
 header, main, section {
     display: grid;
