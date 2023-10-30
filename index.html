@@ -42,14 +42,16 @@
     <header>
         <div class="nav__bar">
             <div class="logo">
-                <img 
-                    src="./images/DuceCRM.webp" 
-                    alt="DuceCRM Logo" 
-                    title="DuceCRM Logo" 
-                    width="153px" 
-                    height="25px">
+                <a href="/" title="DuceCRM">
+                    <img 
+                        src="./images/DuceCRM.webp" 
+                        alt="DuceCRM Logo" 
+                        title="DuceCRM Logo" 
+                        width="153px" 
+                        height="25px">
+                </a>
             </div>
-            <nav>
+            <nav class="desk__nav">
                 <ul>
                     <li>
                         <a 
@@ -68,7 +70,7 @@
                 </ul>
             </nav>
             <a 
-                href="/#joinourwaitlist" class="pri-btn">
+                href="/#joinourwaitlist" class="pri-btn desk__nav">
                     Join Our Waitlist
             </a>
             <div class="mobile__nav">
@@ -76,28 +78,29 @@
                 <div class="bar__two"></div>
                 <div class="bar__three"></div>
             </div>
-            <div class="mobile__menu">
-                <div>
-                    <a 
-                        href="/#features" 
-                        title="Features">
-                            Features
-                    </a>
-                    <a 
-                        href="/#benefits" 
-                        title="Benefits">
-                            Benefits
-                    </a>
-                </div>
-                <div>
-                    <a 
-                        href="/#joinourwaitlist" class="pri-btn">
-                            Join Our Waitlist
-                    </a>
-                </div>
-            </div>
         </div>
+            
     </header>
+    <div class="mobile__menu">
+        <div>
+            <a 
+                href="/#features" 
+                title="Features">
+                    Features
+            </a>
+            <a 
+                href="/#benefits" 
+                title="Benefits">
+                    Benefits
+            </a>
+        </div>
+        <div>
+            <a 
+                href="/#joinourwaitlist" class="pri-btn">
+                    Join Our Waitlist
+            </a>
+        </div>
+    </div>
     <!-- END OF HEADER NAV TAG -->
     <!-- START OF MAIN WEB CONTENT -->
     <!-- HERO SECTION -->
@@ -444,7 +447,7 @@
                     height="605px">
         </div>
     </section>
-    <section class="ten margin">
+    <section class="ten margin" id="joinourwaitlist">
         <div class="">
             <div>
                 <h3>

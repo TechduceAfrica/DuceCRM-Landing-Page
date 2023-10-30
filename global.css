@@ -7,7 +7,7 @@ header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.35);
-    z-index: 99999;
+    z-index: 99;
 }
 
 .nav__bar {
@@ -66,6 +66,35 @@ nav a:hover::after {
 .mobile__nav, 
 .mobile__menu {
     display: none;
+}
+
+.mobile__menu {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: calc(100vh - 50px);
+    padding: 20% 50px;
+    transform: translateX(110vw);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: all 500ms ease-in-out 0ms;
+    overflow: hidden;
+    z-index: 98;
+}
+
+.mobile__menu.clicked {
+    display: grid;
+    transform: translateX(05vw);
+}
+
+.mobile__menu a {
+    display: block !important;
+    font-size: 1.5rem;
+    margin-top: 3rem;
 }
 
 .DC__hero__section {
@@ -292,9 +321,8 @@ footer .social__wrapper > div:hover path {
     }
 
     .mobile__nav div {
-        width: 25px;
         height: 3px;
-        border-radius: 100px;
+        border-radius: 10px;
         display: block;
         background-color: #000;
         transition: all 250ms ease-in-out 0ms;
@@ -322,42 +350,20 @@ footer .social__wrapper > div:hover path {
         width: 25px;
     }
 
-    .mobile__nav:hover .bar__one {
+    .mobile__nav .bar__one {
         width: 20px;
     }
 
-    .mobile__nav:hover .bar__two {
+    .mobile__nav .bar__two {
         width: 15px;
     }
 
-    .mobile__nav:hover.clicked .bar__one {
+    .mobile__nav .bar__three {
         width: 25px;
     }
 
-    .mobile__menu {
-        display: grid;
-        grid-template-rows: 70% 30%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 60vw;
-        height: 100vh;
-        padding: 20% 50px;
-        transform: translateX(110vw);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.938);
-        transition: all 500ms ease-in-out 0ms;
-    }
-
-    .mobile__menu.clicked {
-        transform: translateX(05vw);
-    }
-
-    .mobile__menu a {
-        display: block !important;
-        font-size: 1.5rem;
-        margin-top: 3rem;
+    .mobile__nav.clicked .bar__one {
+        width: 25px;
     }
 
     h3, h3 .crm__word {
@@ -375,7 +381,7 @@ footer .social__wrapper > div:hover path {
         font-size: 1rem;
     }
 
-    .nav__bar a {
+    .desk__nav {
         display: none;
     }
 
