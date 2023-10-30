@@ -47,9 +47,16 @@ body {
     --t-b-pad: 50px;
 }
 
+header {
+    overflow: hidden visible;
+}
+
 header, main, section {
     display: grid;
     justify-items: center;
+}
+
+main, section {
     overflow: hidden;
 }
 
@@ -136,7 +143,7 @@ section.faq,
     box-sizing: border-box;
 }
 
-section.ten {
+section.ten > div {
     max-width: 1200px;
     width: 100%;
     padding-inline: 10px;
@@ -144,7 +151,7 @@ section.ten {
     box-sizing: border-box;
 }
 
-section.ten > div:first-child {
+section.ten > div > div:first-child {
     padding-top: var(--t-b-pad);
     padding-bottom: calc(2 * var(--t-b-pad));
 }

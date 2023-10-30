@@ -1,4 +1,8 @@
 .pri-btn {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 500;
     padding: 1rem 2rem;
     background-color: var(--pri-color);
     border-radius: 1rem;
@@ -30,11 +34,11 @@
     text-wrap: nowrap;
 }
 
-.pri-btn {
+/* .pri-btn {
     color: #FFFFFF;
     font-size: 1.5rem;
     font-weight: 500;
-}
+} */
 
 .pri-btn:hover::before {
     height: 100%;
