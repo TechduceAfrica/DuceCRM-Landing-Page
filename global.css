@@ -7,7 +7,7 @@ header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.35);
-    z-index: 99;
+    z-index: 9999;
 }
 
 .nav__bar {
@@ -83,7 +83,7 @@ nav a:hover::after {
     background-color: rgba(255, 255, 255, 0.35);
     transition: all 500ms ease-in-out 0ms;
     overflow: hidden;
-    z-index: 98;
+    z-index: 9998;
 }
 
 .mobile__menu.clicked {
@@ -141,12 +141,13 @@ section.nine {
 section.ten > div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    align-items: end;
+    align-items: center;
     gap: 20px;
 }
 
 section.one h3 {
     text-align: center;
+    max-width: 720px;
 }
 
 .svg__play__icon {
@@ -256,6 +257,10 @@ section.ten img {
     animation: pulse 1200ms linear 500ms infinite;
 }
 
+section.ten > div > div:first-child h3 {
+    margin: 0px 0px 20px 0px;
+}
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 #FF640079;
@@ -266,6 +271,10 @@ section.ten img {
     100% {
         box-shadow: 0 0 0 0 #FF640000;
     }
+}
+
+.form__btn {
+    margin-top: 1.5rem;
 }
 
 .faq > div:last-child {
@@ -447,7 +456,11 @@ footer .social__wrapper > div:hover path {
     }
 
     .desk__nav {
-        display: none;
+        display: none !important;
+    }
+
+    section.one h3 {
+        max-width: 280px;
     }
 
     .DC__hero__section {
@@ -531,6 +544,14 @@ footer .social__wrapper > div:hover path {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    section.ten > div > div:first-child, 
+    section.ten > div > div:first-child p, 
+    section.ten > div > div:first-child h3 {
+        text-align: left;
+        /* padding-top: var(--t-b-pad);
+        padding-bottom: calc(2 * var(--t-b-pad)); */
     }
 
     .faq > div:last-child, details {

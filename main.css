@@ -151,13 +151,13 @@ section.ten > div {
     max-width: 1200px;
     width: 100%;
     padding-inline: 10px;
-    padding-top: var(--t-b-pad);
+    /* padding-top: var(--t-b-pad); */
     box-sizing: border-box;
 }
 
 section.ten > div > div:first-child {
-    padding-top: var(--t-b-pad);
-    padding-bottom: calc(2 * var(--t-b-pad));
+    /* padding-top: var(--t-b-pad);
+    padding-bottom: calc(2 * var(--t-b-pad)); */
 }
 
 h3 .crm__word {
@@ -182,7 +182,8 @@ input {
     padding: 5px 20px;
     margin: 20px 0px 0px 0px;
     border-radius: 10px;
-    border: solid 1px var(--heading-dark-color);
+    border: solid 2px var(--heading-dark-color);
+    transition: all 200ms ease-in-out 0ms;
 }
 
 input[type=submit] {
