@@ -155,11 +155,6 @@ section.ten > div {
     box-sizing: border-box;
 }
 
-section.ten > div > div:first-child {
-    /* padding-top: var(--t-b-pad);
-    padding-bottom: calc(2 * var(--t-b-pad)); */
-}
-
 h3 .crm__word {
     color: var(--pri-color);
     font-size: 3rem;
@@ -186,19 +181,6 @@ input {
     transition: all 200ms ease-in-out 0ms;
 }
 
-input[type=submit] {
-    font-family: 'Outfit-Regular';
-    background-color: var(--pri-color);
-    color: #ffffff;
-    border: none;
-    width: -moz-fit-content;
-    width: fit-content;
+button {
     cursor: pointer;
 }
-
-/* @media (max-width:787px) {
-    h1 {
-        font-size: 1.625rem;
-        letter-spacing: 0.065rem;
-    }
-} */
