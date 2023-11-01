@@ -3,6 +3,7 @@ function submitForm() {
     const successMessage = document.getElementById('success-message');
     const emailInput = document.getElementById('emailInput');
     const email = emailInput.value;
+    const recaptchaResponse = grecaptcha.getResponse();
     
     // Validate the email input
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,6 +11,12 @@ function submitForm() {
 
     if (!emailRegex.test(email)) {
         errorMessage.textContent = 'Check email address for invalid input';
+        successMessage.textContent = '';
+        return;
+    }
+
+    if (!recaptchaResponse) {
+        errorMessage.textContent = 'Please complete the reCAPTCHA';
         successMessage.textContent = '';
         return;
     }
