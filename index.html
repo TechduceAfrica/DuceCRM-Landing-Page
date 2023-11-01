@@ -88,18 +88,24 @@
         <div>
             <a 
                 href="#features" 
-                title="Features">
+                title="Features"
+                class="menuList"
+                onclick="menuItem(this)">
                     Features
             </a>
             <a 
                 href="#benefits" 
-                title="Benefits">
+                title="Benefits"
+                onclick="menuItem(this)">
                     Benefits
             </a>
         </div>
         <div>
             <a 
-                href="/#joinourwaitlist" class="pri-btn" title="Join Our Waitlist">
+                href="/#joinourwaitlist" 
+                class="pri-btn" 
+                title="Join Our Waitlist" 
+                onclick="menuItem(this)">
                     <!-- Join Our Waitlist -->
             </a>
         </div>
@@ -435,22 +441,29 @@
                 Watch our story unfold. 
             </p>
             <div class="svg__play__icon">
-                <a href="#" title="play video">
+                <span onclick="loadYouTubeVideo()">
                     <svg xmlns="https://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none">
                         <path d="M30 0.812744C24.0666 0.812744 18.2664 2.57221 13.3329 5.86865C8.39943 9.1651 4.55426 13.8505 2.28363 19.3322C0.0129985 24.814 -0.581101 30.846 0.576455 36.6654C1.73401 42.4849 4.59123 47.8304 8.78681 52.0259C12.9824 56.2215 18.3279 59.0787 24.1473 60.2363C29.9667 61.3938 35.9987 60.7997 41.4805 58.5291C46.9623 56.2585 51.6476 52.4133 54.9441 47.4798C58.2405 42.5464 60 36.7462 60 30.8127C60 26.8731 59.224 22.972 57.7164 19.3322C56.2088 15.6925 53.999 12.3853 51.2132 9.59954C48.4274 6.81378 45.1203 4.604 41.4805 3.09636C37.8407 1.58872 33.9397 0.812744 30 0.812744ZM24 44.3127V17.3127L42 30.8127L24 44.3127Z" fill="#FF6400"/>
                     </svg>
-                </a>
+                </span>
             </div>
-            <div class="pop__up">
-                <div>
-                    <iframe 
+            <div class="pop__up" onclick="closePopup()">
+                <div class="pop__up__close__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd" d="M4.28 3.22a.75.75 0 0 0-1.06 1.06L6.94 8l-3.72 3.72a.75.75 0 1 0 1.06 1.06L8 9.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L9.06 8l3.72-3.72a.75.75 0 0 0-1.06-1.06L8 6.94L4.28 3.22Z" clip-rule="evenodd"/>
+                    </svg>
+
+                </div>
+                <div id="video-container">
+                    <!-- <iframe 
                         width="560" 
                         height="315" 
+                        loading="lazy"
                         src="https://www.youtube-nocookie.com/embed/fWrZxDYhkq8?si=hmRYKf4JJ4XC5bN7" 
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen></iframe>
+                        allowfullscreen></iframe> -->
                 </div>
             </div>
         </div>
@@ -475,13 +488,16 @@
                 <div class="form__section">
                     <form method="post" action="">
                         <div>
-                            <input type="text" placeholder="Enter You Email" name="" id="">   
+                            <input type="text" placeholder="Enter You Email" name="email" id="emailInput"> 
+                            <div id="error-message"></div>
+                            <div id="success-message"></div>  
                         </div>
                         <div class="form__btn">
-                            <a 
-                                href="/#joinourwaitlist" class="pri-btn" title="Join Our Waitlist">
-                                    <!-- Join Our Waitlist -->
-                            </a>
+                            <button 
+                                type="button" 
+                                class="pri-btn" 
+                                onclick="submitForm()">Join Our Waitlist
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -587,6 +603,6 @@
     </footer>
     
 </body>
-
 <script src="./script.js"></script>
+<script src="./form.js"></script>
 </html>
