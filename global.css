@@ -257,6 +257,10 @@ section.ten img {
     animation: pulse 1200ms linear 500ms infinite;
 }
 
+.svg__play__icon span {
+    cursor: pointer;
+}
+
 section.ten > div > div:first-child h3 {
     margin: 0px 0px 20px 0px;
 }
@@ -307,7 +311,7 @@ section.ten > div > div:first-child h3 {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    max-width: 90vw;
+    max-width: 65vw;
     width: 100%;
     aspect-ratio: 16/9;
 }
@@ -614,6 +618,10 @@ footer .social__wrapper > div:hover path {
 
     .svg__play__icon {
         margin-left: 0px;
+    }
+
+    .pop__up > #video-container {
+        max-width: 100%;
     }
 
     .nine > div {

@@ -1,3 +1,17 @@
+document.getElementById('emailInput').addEventListener('focus', function () {
+    // Load the reCAPTCHA script when the input is focused
+    loadReCAPTCHAScript();
+});
+
+function loadReCAPTCHAScript() {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+}
+
+
 function submitForm() {
     const errorMessage = document.getElementById('error-message');
     const successMessage = document.getElementById('success-message');
