@@ -36,8 +36,8 @@ playVid.addEventListener("click", () => {
 
 function loadYouTubeVideo() {
     var videoContainer = document.getElementById('video-container');
-    videoContainer.innerHTML =
-      '<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/fWrZxDYhkq8?si=hmRYKf4JJ4XC5bN7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    videoContainer.innerHTML = 
+        '<iframe loading="lazy" src="https://www.youtube.com/embed/fRZhdf-xDFA?si=uexBoK9Ur2kYl8v_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
 };
 
 function closePopup() {
