@@ -16,12 +16,22 @@ function menuItem() {
     mobileMenu.classList.remove("clicked");
 }
 
-// window.addEventListener("click", (event) => {
-//     if (event.target !== hamburger && event.target !== mobileMenu) {
-//         hamburger.classList.remove("clicked");
-//         mobileMenu.classList.remove("clicked");
+
+// window.addEventListener('scroll', function () {
+//     const perkStick = document.querySelector('.perk__stick');
+//     const lastPerk = document.querySelector('.perk:last-child');
+//     const scrollPosition = window.scrollY;
+//     const lastPerkPosition = lastPerk.offsetTop;
+
+//     if (scrollPosition >= lastPerkPosition) {
+//         perkStick.style.position = 'relative';
+//         perkStick.style.top = `${-[Number.lastPerkPosition]-[Number.scrollPosition]}px`;
+//     } else {
+//         perkStick.style.position = 'sticky';
+//         perkStick.style.top = '0';
 //     }
 // });
+
 
 const playVid = document.querySelector(".svg__play__icon");
 const VidPopUp = document.querySelector(".pop__up");
