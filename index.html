@@ -492,7 +492,11 @@
                     updates and many more.
                 </p>
                 <div class="form__section">
-                    <form name="join-our-waitlist" method="POST" data-netlify="true">
+                    <form name="join-our-waitlist" 
+                            method="POST" 
+                            data-netlify-recaptcha="true"  
+                            netlify-honeypot="bot-field" 
+                            data-netlify="true">
                         <input type="hidden" name="subject" value="Someone Just Joined The DUCECRM Waitlist" />
                         <div>
                             <input type="text" placeholder="Enter You Email" name="email" id="emailInput"> 
@@ -500,9 +504,10 @@
                             <div id="success-message"></div>  
                         </div>
                         <div class="form__btn">
-                            <div id="recaptcha-container">
+                            <!-- <div id="recaptcha-container">
                                 <div class="g-recaptcha" data-sitekey="6LcgTOkoAAAAADGegqwxPku88UmkMnS0FzJu87_k"></div>
-                            </div>
+                            </div> -->
+                            <div data-netlify-recaptcha="true"></div>
                             <button 
                                 type="button" 
                                 class="pri-btn" 
