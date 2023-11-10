@@ -11,6 +11,8 @@
     overflow: hidden;
     width: 180px;
     height: 20px;
+    white-space: nowrap;
+    font-family: 'Outfit-Medium', Arial, Helvetica, sans-serif;
 }
 
 .pri-btn::before, .pri-btn::after {
