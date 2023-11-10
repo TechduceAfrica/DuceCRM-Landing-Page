@@ -1,39 +1,36 @@
 @font-face {
     font-family: "Outfit-Light";
     src:
-        local("Outfit"),
         url("./fonts/Outfit-Light.woff2") format("woff2"),
         url('/fonts/Outfit-Light.woff') format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Outfit-Medium";
     src:
-        local("Outfit"),
         url("./fonts/Outfit-Medium.woff2") format("woff2"),
         url('/fonts/Outfit-Medium.woff') format('woff');
-    font-weight: normal;
+    font-weight: 500;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Outfit-Regular";
     src:
-      url("./fonts/Outfit-Regular.woff2") format("woff2"),
-      url('/fonts/Outfit-Regular.woff') format('woff');
-    font-weight: normal;
+        url("./fonts/Outfit-Regular.woff2") format("woff2"),
+        url('/fonts/Outfit-Regular.woff') format('woff');
+    font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Outfit-SemiBold";
     src:
-        local("Outfit"),
         url("./fonts/Outfit-SemiBold.woff2") format("woff2"),
         url('/fonts/Outfit-SemiBold.woff') format('woff');
-    font-weight: normal;
+    font-weight: 600;
     font-display: swap;
 }
 
@@ -81,11 +78,11 @@ h1, h3 {
 h1 {
     font-size: clamp(1.25rem, 4vw + 1rem, 3rem);
     /* font-size: 3.25rem; */
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 h3, h4, p {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 h3 {
