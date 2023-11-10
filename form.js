@@ -42,24 +42,24 @@ function submitForm() {
     successMessage.textContent = 'Correct email address';
     successMessage.style.color = 'green';
 
-    fetch('/api-endpoint-url', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-        .then(response => {
-            if (response.ok) {
-                // Request was successful, handle the response here
-                console.log('Data sent successfully.');
-            } else {
-                // Request failed, handle the error here
-                console.error('Failed to send data, Check input.');
-            }
-        })
-        .catch(error => {
-            // Handle any network or other errors here
-            console.error('An error occurred:', error);
-        });
+    // fetch('/api-endpoint-url', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(data),
+    // })
+    //     .then(response => {
+    //         if (response.ok) {
+    //             // Request was successful, handle the response here
+    //             console.log('Data sent successfully.');
+    //         } else {
+    //             // Request failed, handle the error here
+    //             console.error('Failed to send data, Check input.');
+    //         }
+    //     })
+    //     .catch(error => {
+    //         // Handle any network or other errors here
+    //         console.error('An error occurred:', error);
+    //     });
 }
