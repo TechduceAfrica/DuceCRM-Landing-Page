@@ -321,6 +321,10 @@ section.ten > div > div:first-child h3 {
     height: 100%;
 }
 
+.ten > div {
+    justify-items: flex-end;
+}
+
 .ten > div > div:last-child {
     align-self: end;
     font-size: 0px;
@@ -459,6 +463,23 @@ footer .social__wrapper > div:hover path {
 
 .footer__credit a {
     color: var(--pri-color);
+}
+
+.form__slider {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.form__slider::-webkit-scrollbar {
+    display: none
+}
+
+.form__slider > div {
+    min-width: 262px;
 }
 
 @media (max-width:787px) {
