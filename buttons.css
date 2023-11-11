@@ -18,6 +18,7 @@
 .pri-btn::before, .pri-btn::after {
     position: absolute;
     z-index: 999;
+    opacity: 1;
 }
 
 .pri-btn::before {
@@ -37,13 +38,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-wrap: nowrap;
+    background-color: var(--pri-color);
+    transition: background-color 50ms linear 0ms;
 }
 
-/* .pri-btn {
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    font-weight: 500;
-} */
+.pri-btn:hover::after {
+    background-color: transparent;
+}
 
 .pri-btn:hover::before {
     height: 100%;
