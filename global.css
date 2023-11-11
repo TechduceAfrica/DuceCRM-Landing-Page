@@ -328,11 +328,13 @@ section.ten > div > div:first-child h3 {
 .ten > div > div:last-child {
     align-self: end;
     font-size: 0px;
+    z-index: 0;
 }
 
 section.ten > div > div:first-child {
     padding-top: var(--t-b-pad);
     padding-bottom: var(--t-b-pad);
+    justify-self: stretch;
 }
 
 .form__btn {
@@ -344,6 +346,8 @@ button.pri-btn {
     width: 190px;
     height: 54px;
     border: none !important;
+    z-index: 0;
+    color: var(--pri-color);
 }
 
 #error-message {
