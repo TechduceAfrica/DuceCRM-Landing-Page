@@ -33,6 +33,27 @@ function menuItem() {
 // });
 
 
+// CTA POP UP
+const ctabtn = document.querySelector(".joinourwaitlistcta");
+const ctapopup = document.querySelector(".cta__pop__up");
+
+ctabtn.addEventListener("click", () => {
+    if (ctapopup.classList.contains("open")) {
+        ctapopup.classList.remove("open");
+    } else {
+        ctapopup.classList.add("open");
+    }
+});
+
+function joinourwaitlistcta() {
+    ctapopup.classList.add("open");
+}
+
+function closeCtaPopup() {
+    ctapopup.classList.remove("open");
+};
+
+
 const playVid = document.querySelector(".svg__play__icon");
 const VidPopUp = document.querySelector(".pop__up");
 
