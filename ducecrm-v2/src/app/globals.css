@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Outfit-Light";
+  src:
+      url("/fonts/Outfit-Light.woff2") format("woff2"),
+      url('/fonts/Outfit-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit-Medium";
+  src:
+      url("/fonts/Outfit-Medium.woff2") format("woff2"),
+      url('/fonts/Outfit-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit-Regular";
+  src:
+      url("/fonts/Outfit-Regular.woff2") format("woff2"),
+      url('/fonts/Outfit-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit-SemiBold";
+  src:
+      url("/fonts/Outfit-SemiBold.woff2") format("woff2"),
+      url('/fonts/Outfit-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --max-width: 1200px;
+  color: var(--text-color, #4F4E4E);
+  --pri-color: #FF6400;
+  --white-color: #fff;
+  --heading-dark-color: #2C2C2C;
+  --t-b-pad: 50px;
+  --font-300: "Outfit-Light", Outfit, Arial, Helvetica, sans-serif;
+  --font-400: "Outfit-Regular", Outfit, Arial, Helvetica, sans-serif;
+  --font-500: "Outfit-Medium", Outfit, Arial, Helvetica, sans-serif;
+  --font-600: "Outfit-SemiBold", Outfit, Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {  
+  font-family: 'Outfit-Regular', Outfit, Arial, Helvetica, sans-serif;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  
+} */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, span, a {
+  font-family: var(--font-500), Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+h1, h2, h3, h4, h5, span {
+  color: var(--heading-dark-color);
+}
+
+h1, h2 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: clamp(1.25rem, 4vw + 1rem, 3rem);
+  /* font-size: 3.25rem; */
+  font-weight: 600 !important;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-family: var(--font-400);
+}
+
+.org {
+  color: var(--pri-color);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container__width {
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.grid__j__items__cen {
+  display: grid;
+  justify-items: center;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%; 
+  min-height: 100px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.35);
+  z-index: 9999;
+}
+
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+header nav ul {
+  font-size: 1.5rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  display: block;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+
+nav a, nav a::after {
+  transition: all 500ms ease-in-out 0ms;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--pri-color);
+}
+
+nav a:hover {
+  color: var(--pri-color);
+}
+
+nav a:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.mobile__nav {
+  display: none;
+}
+
+/* HERO SECTION STYLE */
+.DC__hero__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--t-b-pad);
+
+}
+
+.DC__hero__section p {
+  font-size: 1.5rem;
+}
+
+.DC__hero__section .org {
+  color: var(--pri-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.DC__hero__section img {
+  max-width: 525px;
+  max-height: 530px;
+  aspect-ratio: 525/530;
+  width: 100%;
+}
+/* END OF HERO SECTION STYLE */
+
+/* FEATURE SECTION STYLE */
+.feature__sec h2 {
+  max-width: 720px;
+  text-align: center;
+}
+
+.feature__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 20px;
+  padding-block: var(--t-b-pad);
+}
+
+.feature__section__label {
+  font-size: 1.5rem;
+  font-family: var(--font-400);
+}
+
+.feature__section h3 {
+  margin: 1rem 0px;
+}
+
+.feature__section:nth-child(even) .feature__section__image {
+  order: -1;
+}
+
+/* BENEFIT SECTION STYLE */
+.benefit__section {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.benefit__stick {
+  position: sticky;
+  top: 10%;
+  height: 10vh;
+}
+
+.benefit__card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 470px;
+  min-height: 470px;
+  width: 400px;
+  border-radius: 20px 0px;
+  overflow: hidden;
+  align-items: end;
+  cursor: pointer;
+}
+
+.benefit__card__content {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 50px;
+  border-radius: 20px 0px;
+  border: 1.5px solid rgba(255, 255, 255, 0.60);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: all 500ms ease-in-out 0ms;
+}
+
+.benefit__card:hover .benefit__card__content {
+  min-height: 100%;
+}
+
+@media (max-width: 787px) {
+  .desk__nav, .nav__btn {
+  display: none;
+  } 
+  .mobile__nav {
+    display: grid;
+    cursor: pointer;
+    justify-items: right;
+    z-index: 9;
+  }
+  .DC__hero__section {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+  .DC__hero__section div:nth-child(2) {
+    text-align: center;
+  }
+  .feature__section {
+    grid-template-columns: auto;
+  }
+  .feature__sec h2 {
+    max-width: 60vw;
+    font-size: 1.375rem;
+  }
+  .feature__section div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .feature__section:nth-child(even) .feature__section__image {
+    order: 1;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  .feature__section__label, .feature__section p {
+    text-align: center;
+  }
+  .benefit__section {
+    grid-template-columns: auto;
+  }
+}
