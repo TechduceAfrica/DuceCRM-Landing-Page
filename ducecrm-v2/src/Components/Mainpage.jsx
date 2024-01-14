@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import HeroSection from './HeroSection'
 import FeatureSection from './FeatureSection'
 import Benefits from './Benefits'
+import VideoCtaSection from './VideoCtaSection'
 
 export default function Mainpage() {
     return (
@@ -12,6 +13,7 @@ export default function Mainpage() {
                 <HeroSection/>
                 <FeatureSection/>
                 <Benefits/>
+                <VideoCtaSection/>
             </main>
         </>
     )
