@@ -1,10 +1,11 @@
 import { BenefitCopy, BenefitsCopy } from '@/WebCopy/BenefitsCopy'
 import React from 'react'
 import MapBenefits from './MapBenefits'
+import MobileCards from './MobileCards'
 
 export default function Benefits() {
     return (
-        <div className="benefit__section container__width grid__j__items__cen">
+        <section className="benefit__section container__width grid__j__items__cen">
             <div className='benefit__stick'>
                 <h3>
                     {BenefitCopy.title}
@@ -13,9 +14,12 @@ export default function Benefits() {
                     {BenefitCopy.description}
                 </p>
             </div>
-            <div>
+            <div className='benefit__scroll__card__wrapper'>
                 <MapBenefits benefitsList={BenefitsCopy}/>
             </div>
-        </div>
+            <div className='mobile__benefits'>
+                <MobileCards mobilebenefitsList={BenefitsCopy}/>
+            </div>
+        </section>
     )
 }
