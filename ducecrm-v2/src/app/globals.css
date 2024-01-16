@@ -240,7 +240,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-.DC__hero__section span {
+.DC__hero__section > div > span {
   cursor: pointer;
   color: var(--pri-color);
   display: flex;
