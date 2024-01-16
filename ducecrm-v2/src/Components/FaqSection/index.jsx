@@ -3,7 +3,7 @@ import FaqAccordion from './FaqAccordion'
 
 export default function FaqSection() {
     return (
-        <section className='container__width'>
+        <section className='faq__section container__width'>
             <h3>
                 Frequently Asked Questions
             </h3>

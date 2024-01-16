@@ -6,6 +6,7 @@ import Benefits from './Benefits'
 import VideoCtaSection from './VideoCtaSection'
 import FormSection from './FormSection'
 import FaqSection from './FaqSection'
+import Footer from './Footer'
 
 export default function Mainpage() {
     return (
@@ -19,6 +20,8 @@ export default function Mainpage() {
                 <FormSection/>
                 <FaqSection/>
             </main>
+            <Footer/>
+            
         </>
     )
 }
