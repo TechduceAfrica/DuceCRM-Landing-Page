@@ -5,7 +5,7 @@ import MobileCards from './MobileCards'
 
 export default function Benefits() {
     return (
-        <section className="benefit__section container__width">
+        <section className="benefit__section container__width" id='Benefits'>
             <div className='benefit__stick'>
                 <h3>
                     {BenefitCopy.title}
