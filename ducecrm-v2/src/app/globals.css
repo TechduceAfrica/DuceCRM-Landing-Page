@@ -38,6 +38,7 @@
   --max-width: 1200px;
   color: var(--text-color, #4F4E4E);
   --pri-color: #FF6400;
+  --sec-color: #FFF1E9;
   --white-color: #fff;
   --heading-dark-color: #2C2C2C;
   --t-b-pad: 50px;
@@ -45,6 +46,11 @@
   --font-400: "Outfit-Regular", Outfit, Arial, Helvetica, sans-serif;
   --font-500: "Outfit-Medium", Outfit, Arial, Helvetica, sans-serif;
   --font-600: "Outfit-SemiBold", Outfit, Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  color: var(--white-color);
+  background-color: var(--pri-color);
 }
 
 html {
@@ -93,6 +99,12 @@ h2 {
 h3 {
   font-size: 2.25rem;
   font-family: var(--font-400);
+}
+
+p {
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: 1.5rem;
 }
 
 .org {
@@ -226,13 +238,14 @@ nav a:hover::after {
 .feature__sec h2 {
   max-width: 720px;
   text-align: center;
+  margin: auto;
 }
 
 .feature__section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
-  gap: 20px;
+  gap: 20px 40px;
   padding-block: var(--t-b-pad);
 }
 
@@ -245,20 +258,37 @@ nav a:hover::after {
   margin: 1rem 0px;
 }
 
-.feature__section:nth-child(even) .feature__section__image {
+.feature__section:nth-child(odd) .feature__section__image {
   order: -1;
 }
 
 /* BENEFIT SECTION STYLE */
 .benefit__section {
-  display: grid;
-  grid-template-columns: auto auto;
+  /* display: grid;
+  grid-template-columns: auto 50%; */
+  display: flex;
+  gap: 20px 40px;
+  max-height: 700px;
+  overflow-y: scroll;
+  margin-block: var(--t-b-pad);
+  box-sizing: border-box;
 }
 
 .benefit__stick {
   position: sticky;
   top: 10%;
-  height: 10vh;
+  height: 150px;
+}
+
+.benefit__scroll__card__wrapper {
+  height: 500px;
+}
+
+.benefits__cards__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-y: scroll;
 }
 
 .benefit__card {
@@ -271,6 +301,28 @@ nav a:hover::after {
   overflow: hidden;
   align-items: end;
   cursor: pointer;
+}
+
+.mobile__benefits {
+  display: none;
+}
+
+.mobile__benefit__card {
+  text-align: center;
+  width: 190px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 15px 1.5px rgba(255, 100, 0, 0.06);
+}
+
+.mobile__benefit__card img {
+  border-radius: 20px;
+  object-position: center;
+  object-fit: cover;
+  aspect-ratio: 190/150;
+}
+
+.mobile__benefit__card h4 {
+  font-size: 1.25rem;
 }
 
 .benefit__card__content {
@@ -289,6 +341,103 @@ nav a:hover::after {
 
 .benefit__card:hover .benefit__card__content {
   min-height: 100%;
+}
+
+.video__cta__section {
+  display: grid;
+  grid-template-columns: auto 50%;
+  align-items: center;
+  gap: 20px 40px;
+  padding-block: var(--t-b-pad);
+  box-sizing: border-box;
+}
+
+.video__cta__section h3 {
+  font-size: 3rem;
+}
+
+.form__section__wrapper {
+  background-color: var(--sec-color);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.form__section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 40px;
+  margin-top: 40px;
+  padding-bottom: 0px;
+}
+
+.form__section > div:first-child {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form__section > div {
+  flex: 0 1 calc(50% - 40px);
+  display: flex;
+  justify-content: center;
+}
+
+.form__section h3 {
+  font-size: 3rem;
+  margin: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+label {
+  display: none;
+}
+
+input {
+  width: 80%;
+  height: 2.5rem;
+  padding: 5px 20px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 10px;
+  border: solid 2px var(--heading-dark-color);
+  transition: all 200ms ease-in-out 0ms;
+}
+
+button {
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.form__sec__slider__wrapper {
+  max-width: 500px;
+  display: flex;
+  align-items: end;
+}
+
+.form__sec__slider__wrapper img {
+  /* max-width: 262px;
+  max-height: 351px; */
+  aspect-ratio: auto 262 / 351;
+  width: 120%;
+}
+
+.swiper-wrapper {
+  line-height: 0px;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: transparent !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
 }
 
 @media (max-width: 787px) {
@@ -320,7 +469,7 @@ nav a:hover::after {
     flex-direction: column;
     align-content: center;
   }
-  .feature__section:nth-child(even) .feature__section__image {
+  .feature__section:nth-child(odd) .feature__section__image {
     order: 1;
   }
   h3 {
@@ -330,7 +479,24 @@ nav a:hover::after {
   .feature__section__label, .feature__section p {
     text-align: center;
   }
+  .feature__sec img {
+    max-width: 300px;
+    align-self: center;
+  }
   .benefit__section {
+    flex-direction: column;
+  }
+  .benefit__scroll__card__wrapper {
+    display: none;
+  }
+  .mobile__benefits {
+    display: block;
+  }
+  .video__cta__section {
+    text-align: center;
     grid-template-columns: auto;
+  }
+  .form__section {
+    flex-direction: column;
   }
 }
