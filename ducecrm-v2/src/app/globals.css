@@ -38,6 +38,7 @@
   --max-width: 1200px;
   color: var(--text-color, #4F4E4E);
   --pri-color: #FF6400;
+  --sec-color: #FFF1E9;
   --white-color: #fff;
   --heading-dark-color: #2C2C2C;
   --t-b-pad: 50px;
@@ -98,6 +99,12 @@ h2 {
 h3 {
   font-size: 2.25rem;
   font-family: var(--font-400);
+}
+
+p {
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: 1.5rem;
 }
 
 .org {
@@ -257,8 +264,9 @@ nav a:hover::after {
 
 /* BENEFIT SECTION STYLE */
 .benefit__section {
-  display: grid;
-  grid-template-columns: auto 50%;
+  /* display: grid;
+  grid-template-columns: auto 50%; */
+  display: flex;
   gap: 20px 40px;
   max-height: 700px;
   overflow-y: scroll;
@@ -269,7 +277,7 @@ nav a:hover::after {
 .benefit__stick {
   position: sticky;
   top: 10%;
-  height: 10vh;
+  height: 150px;
 }
 
 .benefit__scroll__card__wrapper {
@@ -348,6 +356,90 @@ nav a:hover::after {
   font-size: 3rem;
 }
 
+.form__section__wrapper {
+  background-color: var(--sec-color);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.form__section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 40px;
+  margin-top: 40px;
+  padding-bottom: 0px;
+}
+
+.form__section > div:first-child {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form__section > div {
+  flex: 0 1 calc(50% - 40px);
+  display: flex;
+  justify-content: center;
+}
+
+.form__section h3 {
+  font-size: 3rem;
+  margin: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+label {
+  display: none;
+}
+
+input {
+  width: 80%;
+  height: 2.5rem;
+  padding: 5px 20px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 10px;
+  border: solid 2px var(--heading-dark-color);
+  transition: all 200ms ease-in-out 0ms;
+}
+
+button {
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.form__sec__slider__wrapper {
+  max-width: 500px;
+  display: flex;
+  align-items: end;
+}
+
+.form__sec__slider__wrapper img {
+  /* max-width: 262px;
+  max-height: 351px; */
+  aspect-ratio: auto 262 / 351;
+  width: 120%;
+}
+
+.swiper-wrapper {
+  line-height: 0px;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: transparent !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
 @media (max-width: 787px) {
   .desk__nav, .nav__btn {
   display: none;
@@ -387,14 +479,24 @@ nav a:hover::after {
   .feature__section__label, .feature__section p {
     text-align: center;
   }
-  .benefit__section, 
-  .video__cta__section {
-    grid-template-columns: auto;
+  .feature__sec img {
+    max-width: 300px;
+    align-self: center;
+  }
+  .benefit__section {
+    flex-direction: column;
   }
   .benefit__scroll__card__wrapper {
     display: none;
   }
   .mobile__benefits {
     display: block;
+  }
+  .video__cta__section {
+    text-align: center;
+    grid-template-columns: auto;
+  }
+  .form__section {
+    flex-direction: column;
   }
 }

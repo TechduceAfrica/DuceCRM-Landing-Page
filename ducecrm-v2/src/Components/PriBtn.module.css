@@ -8,8 +8,8 @@
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
-    width: 180px;
-    height: 20px;
+    /* width: 180px;
+    height: 20px; */
     white-space: nowrap;
     font-family: var(--font-500);
 }
@@ -32,7 +32,7 @@
 
 .pri__btn::after {
     content: "Join Our Waitlist";
-    top: 55.5%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-wrap: nowrap;
