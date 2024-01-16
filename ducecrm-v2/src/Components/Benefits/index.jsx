@@ -5,7 +5,7 @@ import MobileCards from './MobileCards'
 
 export default function Benefits() {
     return (
-        <section className="benefit__section container__width grid__j__items__cen">
+        <section className="benefit__section container__width">
             <div className='benefit__stick'>
                 <h3>
                     {BenefitCopy.title}
