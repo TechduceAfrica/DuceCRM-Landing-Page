@@ -1,20 +1,28 @@
 'use client'
-import React, { useRef, useState }  from 'react'
+import React from 'react'
 import BenefitsMobileCard from './BenefitsMobileCard'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
 
 export default function MobileCards({ mobilebenefitsList }) {
     return (
         <div>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={10}
-                
-                navigation={true}
-                modules={[Navigation]}
+                // modules={[Navigation, Pagination]}
+                // navigation
+                // pagination={{ clickable: true }}
+                spaceBetween={20}
+                loop={true}
+                slidesPerView={3}
+                // breakpoints={{
+                //     768: {
+                //     slidesPerView: 2,
+                //     },
+                // }}
             >
                 {Array.isArray(mobilebenefitsList) &&
                     mobilebenefitsList.map((mobilebenefit, index) => (
