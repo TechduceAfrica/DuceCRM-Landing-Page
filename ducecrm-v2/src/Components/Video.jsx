@@ -9,6 +9,7 @@ export default function Video({ videoId }) {
         width: '640',
         playerVars: {
         autoplay: 0,
+        rel: 0,
         },
     };
 
