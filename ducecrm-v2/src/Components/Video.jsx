@@ -13,8 +13,8 @@ export default function Video({ videoId }) {
     };
 
     return (
-        <>
+        <div className='popup__video__container'>
             <YouTube videoId={videoId} opts={opts} />
-        </>
+        </div>
     )
 }

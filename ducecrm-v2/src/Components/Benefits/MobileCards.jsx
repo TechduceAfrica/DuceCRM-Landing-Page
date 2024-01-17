@@ -17,7 +17,7 @@ export default function MobileCards({ mobilebenefitsList }) {
                 // pagination={{ clickable: true }}
                 spaceBetween={20}
                 loop={true}
-                slidesPerView={3}
+                slidesPerView={2}
                 // breakpoints={{
                 //     768: {
                 //     slidesPerView: 2,

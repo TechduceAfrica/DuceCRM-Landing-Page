@@ -1,17 +1,9 @@
-'use client'
 import { HeroCopy } from "@/WebCopy/HeroCopy";
 import Image from "next/image";
 import FormPopUp from "./Popups/FormPopUp";
+import { handleOpenPopup } from './Popups/handlePopUpForm'
 
 export default function HeroSection() {
-
-    const handleOpenPopup = () => {
-        const popUpOpener = document.querySelector('.form__popup');
-        if (popUpOpener) {
-            popUpOpener.classList.toggle('open');
-        }
-    };
-
     return (
         <>
             <section className="DC__hero__section container__width">

@@ -56,12 +56,31 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-x: hidden;
 }
 
 body {  
   font-family: 'Outfit-Regular', Outfit, Arial, Helvetica, sans-serif;
   margin: auto;
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--sec-color); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pri-color); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--heading-dark-color); 
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -138,8 +157,8 @@ img {
 
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky; */
+  position: fixed;
   top: 0;
   width: 100%; 
   min-height: 100px;
@@ -208,8 +227,43 @@ nav a:hover::after {
   width: 100%;
 }
 
-.mobile__nav {
-  display: none;
+.mobile__nav, 
+.mobile__menu {
+    display: none;
+}
+
+.mobile__menu {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 85%;
+  height: 100%;
+  padding: 20% 50px;
+  box-sizing: border-box;
+  transform: translateX(150vw);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: all 500ms ease-in-out 0ms;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.mobile__menu.clicked {
+    display: grid;
+    transform: translateX(05vw);
+}
+
+.mobile__menu a {
+    display: block !important;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+main {
+  margin-top: 90px;
 }
 
 /* HERO SECTION STYLE */
@@ -240,7 +294,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-.DC__hero__section span {
+.DC__hero__section > div > span {
   cursor: pointer;
   color: var(--pri-color);
   display: flex;
@@ -576,7 +630,7 @@ footer .footer__social__wrapper > div:hover path {
   display: none;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(0, 0, 0, 0.60);
   z-index: 9999;
 }
 
@@ -606,15 +660,56 @@ footer .footer__social__wrapper > div:hover path {
   .desk__nav, .nav__btn {
   display: none;
   } 
+  .logo {
+    width: 153px;
+  }
   .mobile__nav {
     display: grid;
     cursor: pointer;
     justify-items: right;
     z-index: 9;
   }
+  .mobile__nav div {
+    height: 3px;
+    border-radius: 10px;
+    display: block;
+    background-color: #000;
+    transition: all 250ms ease-in-out 0ms;
+  }
+  .bar__two {
+    margin-block: 5px;
+    opacity: 1;
+  }
+  .mobile__nav .bar__one {
+    width: 20px;
+  }
+  .mobile__nav .bar__two {
+    width: 15px;
+  }
+  .mobile__nav .bar__three {
+    width: 25px;
+  }
+  .clicked .bar__one {
+    rotate: 135deg;
+    transform: translate(5px, -6px);
+    width: 25px;
+  }
+
+  .clicked .bar__two {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  .clicked .bar__three {
+    rotate: -136deg;
+    transform: translate(6px, 6px);
+    width: 25px;
+  }
   .DC__hero__section {
     grid-template-columns: auto;
     gap: 40px;
+  }
+  .DC__hero__section :is(p, .org) {
+    font-size: 1rem;
   }
   .DC__hero__section div:nth-child(2) {
     text-align: center;
@@ -623,7 +718,7 @@ footer .footer__social__wrapper > div:hover path {
     grid-template-columns: auto;
   }
   .feature__sec h2 {
-    max-width: 60vw;
+    max-width: 280px;
     font-size: 1.375rem;
   }
   .feature__section div {
@@ -638,8 +733,12 @@ footer .footer__social__wrapper > div:hover path {
     text-align: center;
     font-size: 1.25rem;
   }
+  p {
+    font-size: 1rem;
+  }
   .feature__section__label, .feature__section p {
     text-align: center;
+    font-size: 1rem;
   }
   .feature__sec img {
     max-width: 300px;
@@ -648,17 +747,50 @@ footer .footer__social__wrapper > div:hover path {
   .benefit__section {
     flex-direction: column;
   }
+  .benefit__stick {
+    top: 0;
+  }
+  .benefit__stick p {
+    text-align: center;
+  }
   .benefit__scroll__card__wrapper {
     display: none;
   }
   .mobile__benefits {
     display: block;
   }
+  .mobile__benefit__card__image__wrapper {
+    width: 190px;
+    height: 150px;
+  }
   .video__cta__section {
     text-align: center;
     grid-template-columns: auto;
   }
+  .video__cta__section h3 {
+    font-size: 1.375rem;
+  }
+  .popup__video__container {
+    max-width: 90vw;
+    overflow: hidden;
+  }
+  .popup__video__container iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+  }
   .form__section {
     flex-direction: column;
+  }
+  .form__section h3 {
+    font-size: 1.375rem;
+    text-align: left;
+  }
+  .faq__section {
+    padding-block: 20px;
+  }
+  .footer__main {
+    flex-direction: column;
+    gap: 10px 
   }
 }
