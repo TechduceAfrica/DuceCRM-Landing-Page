@@ -3,6 +3,8 @@ import { Logo as logo } from '@/WebCopy/logo'
 import Image from 'next/image'
 import PriBtn from './PriBtn'
 import { NavCopy, NavBtn } from '@/WebCopy/NavCopy'
+import { handleMobileMenu } from '@/Components/handleMobileMenu'
+import { handleOpenPopup } from './Popups/handlePopUpForm'
 
 export default function NavBar() {
     return (
@@ -41,7 +43,7 @@ export default function NavBar() {
                         <PriBtn {...NavBtn}/>
                     </div>
 
-                    <div className="mobile__nav">
+                    <div className="mobile__nav" onClick={handleMobileMenu}>
                         <div className="bar__one"></div>
                         <div className="bar__two"></div>
                         <div className="bar__three"></div>
@@ -49,6 +51,24 @@ export default function NavBar() {
                 </div>
                     
             </header>
+            <div className="mobile__menu">
+                <div>
+                    {NavCopy.map((item, index) => (
+                        <a 
+                            href={item.Link} 
+                            key={index}
+                            title={item.Menu}
+                            onClick={handleMobileMenu}
+                        >
+                            {item.Menu}
+                        </a>
+                        
+                    ))}
+                </div>
+                <div onClick={handleOpenPopup}>
+                    <PriBtn {...NavBtn}/>
+                </div>
+            </div>
         </>
     )
 }
