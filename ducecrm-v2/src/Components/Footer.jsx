@@ -43,7 +43,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='footer__credit__wrapper'>
+            <div className='footer__credit__wrapper container__width'>
                 <span>
                     © Copyright 2024 | A brain child of <a 
                                                             href="https://www.techduce.africa/?ducecrm-footer" 
