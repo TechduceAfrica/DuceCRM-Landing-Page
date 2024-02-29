@@ -107,7 +107,7 @@ p {
 img {
     position: relative;
     object-fit: contain;
-    z-index: -1;
+    z-index: 0;
     width: 100%;
     height: 100%;
 }
@@ -115,6 +115,10 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+section {
+    background-color: #fff;
 }
 
 section h4 {
